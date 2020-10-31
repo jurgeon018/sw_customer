@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from sw_shop.sw_order.models import Order, OrderStatus
-from sw_shop.sw_cart.api.serializers import CartItemSerializer
+from box.apps.sw_shop.sw_order.models import Order, OrderStatus
+from box.apps.sw_shop.sw_cart.api.serializers import CartItemSerializer
 from ..models import * 
 
 class OrderStatusSerializer(serializers.ModelSerializer):
@@ -22,10 +22,10 @@ class OrderSerializer(serializers.ModelSerializer):
             'user',
         ]
 
-class CustomerGroupSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CustomerGroup
-        exclude = []
+# class CustomerGroupSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = CustomerGroup
+#         exclude = []
 
 
 class CouponSerializer(serializers.ModelSerializer):
@@ -34,8 +34,8 @@ class CouponSerializer(serializers.ModelSerializer):
         exclude = []
 
 
-class SubscriberSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Subscriber
-        exclude = []
+# class SubscriberSerializer(serializers.ModelSerializer):
+    # class Meta:
+    #     model = Subscriber
+    #     exclude = []
 

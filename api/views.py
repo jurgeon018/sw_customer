@@ -7,8 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 from .serializers import *
 
-from sw_shop.sw_order.models import OrderStatus, Order
-from sw_utils.utils import get_user, get_sk
+from box.apps.sw_shop.sw_order.models import OrderStatus, Order
+from box.core.utils import get_user, get_sk
 
 from rest_framework.viewsets import ModelViewSet
 
@@ -20,9 +20,9 @@ from rest_framework.viewsets import ModelViewSet
 
 
 
-class CustomerGroupViewSet(ModelViewSet):
-  serializer_class = CustomerGroupSerializer
-  queryset = CustomerGroup.objects.all()
+# class CustomerGroupViewSet(ModelViewSet):
+#   serializer_class = CustomerGroupSerializer
+#   queryset = CustomerGroup.objects.all()
 
 
 class CouponViewSet(ModelViewSet):
@@ -30,9 +30,9 @@ class CouponViewSet(ModelViewSet):
   queryset = Coupon.objects.all()
 
 
-class SubscriberViewSet(ModelViewSet):
-  serializer_class = SubscriberSerializer
-  queryset = Subscriber.objects.all()
+# class SubscriberViewSet(ModelViewSet):
+#   serializer_class = SubscriberSerializer
+#   queryset = Subscriber.objects.all()
 
 
 
