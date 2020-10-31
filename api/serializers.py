@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from box.apps.sw_shop.sw_order.models import Order, OrderStatus
-from box.apps.sw_shop.sw_cart.api.serializers import CartItemSerializer
+from sw_order.models import Order, OrderStatus
+from sw_cart.api.serializers import CartItemSerializer
 from ..models import * 
 
 class OrderStatusSerializer(serializers.ModelSerializer):

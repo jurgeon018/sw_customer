@@ -4,16 +4,14 @@ from django.utils.translation import gettext_lazy as _
 from django.conf import settings 
 
 
-from ..models import *
-
-from box.core.sw_auth.admin import BoxUserAdmin
-
-
-
-class CustomerAdmin(BoxUserAdmin):
-    pass
-
-
+from .models import *
+if 'sw_auth' in settings.INSTALLED_APPS:
+    from sw_auth.admin import BoxUserAdmin
+    class CustomerAdmin(BoxUserAdmin):
+        pass
+else:
+    class CustomerAdmin(admin.ModelAdmin):
+        pass
 # class CustomerGroupAdmin(admin.ModelAdmin):
 #     def coupon(self, obj):
 #         if obj.coupon:
@@ -84,3 +82,14 @@ class CouponAdmin(admin.ModelAdmin):
 
 
 
+
+from sw_customer.admin import (
+    Customer, CustomerAdmin,
+    # CustomerGroup, CustomerGroupAdmin,
+    Coupon, CouponAdmin,
+    # Subscriber, SubscriberAdmin,
+)
+admin.site.register(Coupon, CouponAdmin)
+# admin.site.register(CustomerGroup, CustomerGroupAdmin)
+# admin.site.register(Subscriber, SubscriberAdmin)
+admin.site.register(Customer, CustomerAdmin)

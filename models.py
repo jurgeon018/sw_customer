@@ -9,7 +9,7 @@ class Customer(get_user_model()):
         verbose_name = _('покупець')
         verbose_name_plural = _('Список покупців')
 
-from box.core.helpers import get_admin_url
+from sw_utils.helpers import get_admin_url
 
 # find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
 

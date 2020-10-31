@@ -3,10 +3,10 @@ from django.utils.translation import gettext_lazy as _
 
 
 class CustomerConfig(apps.AppConfig):
-    name = 'box.apps.sw_shop.sw_customer'
+    name = 'sw_customer'
     verbose_name = _('Покупці')
     verbose_name_plural = verbose_name
     
 
-default_app_config = 'box.apps.sw_shop.sw_customer.CustomerConfig'
+default_app_config = 'sw_customer.CustomerConfig'
 
