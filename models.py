@@ -3,11 +3,11 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-class Customer(get_user_model()):
-    class Meta:
-        proxy = True 
-        verbose_name = _('покупець')
-        verbose_name_plural = _('Список покупців')
+# class Customer(get_user_model()):
+#     class Meta:
+#         proxy = True
+#         verbose_name = _('покупець')
+#         verbose_name_plural = _('Список покупців')
 
 from sw_utils.helpers import get_admin_url
 

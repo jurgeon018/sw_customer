@@ -84,7 +84,7 @@ class CouponAdmin(admin.ModelAdmin):
 
 
 from sw_customer.admin import (
-    Customer, CustomerAdmin,
+    # Customer, CustomerAdmin,
     # CustomerGroup, CustomerGroupAdmin,
     Coupon, CouponAdmin,
     # Subscriber, SubscriberAdmin,
@@ -92,4 +92,4 @@ from sw_customer.admin import (
 admin.site.register(Coupon, CouponAdmin)
 # admin.site.register(CustomerGroup, CustomerGroupAdmin)
 # admin.site.register(Subscriber, SubscriberAdmin)
-admin.site.register(Customer, CustomerAdmin)
+# admin.site.register(Customer, CustomerAdmin)
